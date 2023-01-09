@@ -1,0 +1,112 @@
+.menu {
+    padding: 2rem 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title h2 {
+    margin: 0px;
+}
+
+.underline {
+    height: 0.4rem;
+    width: 4rem;
+    background: rgb(52, 113, 166);
+    margin: auto;
+    border-radius: 5px;
+}
+
+.food-btns {
+    text-align: center;
+}
+
+.all-btn {
+    border: solid black 1px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.all-btn:hover {
+    background-color: rgba(126, 66, 238, 0.509);
+    border: solid rgb(120, 102, 0) 1px;
+}
+
+
+.food-center {
+    width: 90vw;
+    margin: 10px auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+    justify-items: center;
+
+}
+
+.food {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+}
+
+.food-img {
+    object-fit: cover;
+    height: 200px;
+    border: solid rgba(96, 84, 17, 0.765);
+    border-radius: 15px;
+}
+
+.food-info header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted gray;
+}
+
+.food-info h4 {
+    /* border-bottom: 0.5rem; */
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.price {
+    color: goldenrod;
+}
+
+.food-text {
+    margin-bottom: 0;
+    /* padding-top: 1rem; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@media screen and (min-width: 768px) {
+    .food {
+        grid-template-columns: 300px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
+
+    .photo {
+        height: 175px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .food-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo {
+        height: 150px;
+    }
+}
