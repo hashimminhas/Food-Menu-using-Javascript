@@ -16,7 +16,7 @@
 .underline {
     height: 0.4rem;
     width: 4rem;
-    background: rgb(52, 113, 166);
+    background: hsl(205, 77%, 27%);
     margin: auto;
     border-radius: 5px;
 }
@@ -27,7 +27,9 @@
 
 .all-btn {
     border: solid black 1px;
-    border-radius: 5px;
+    background: transparent;
+    font-family: 'Times New Roman', Times, serif;
+     border-radius: 8px;
     font-size: 15px;
     padding: 5px 10px;
     cursor: pointer;
@@ -35,8 +37,8 @@
 }
 
 .all-btn:hover {
-    background-color: rgba(126, 66, 238, 0.509);
-    border: solid rgb(120, 102, 0) 1px;
+    background-color: #c59d5f;
+    border: solid rgb(207, 176, 0) 1px;
 }
 
 
@@ -60,6 +62,7 @@
 .food-img {
     object-fit: cover;
     height: 200px;
+    width: 290px;
     border: solid rgba(96, 84, 17, 0.765);
     border-radius: 15px;
 }

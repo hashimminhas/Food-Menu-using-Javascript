@@ -163,40 +163,40 @@ window.addEventListener("DOMContentLoaded", function () {
 
     displayfooditems(menu);
 
-    
-    
+
+
 });
 
 
 
-filterbtns.forEach (function(btns){
+filterbtns.forEach(function (btns) {
     btns.addEventListener('click', function (e) {
-        const category = e.currentTarget.dataset.id  ;
-        const foodcategory = menu.filter(function(fooditems){
+        const category = e.currentTarget.dataset.id;
+        const foodcategory = menu.filter(function (fooditems) {
             // console.log(fooditems.category);
-            
-        if (fooditems.category === category){
-            return fooditems;  
+
+            if (fooditems.category === category) {
+                return fooditems;
+            }
+        });
+
+        if (category === "all") {
+            displayfooditems(menu);
         }
-       });
-       
-       if (category === "all"){
-           displayfooditems(menu);
-        }
-        else{
+        else {
             displayfooditems(foodcategory);
         }
-        
+
     });
 });
 
 
 function displayfooditems(fooditems) {
-    
+
     let displayfood = fooditems.map(function (item) {
         // console.log(item);
-        
-        
+
+
         return `<article class="food">
         <img src="${item.img}" alt="" class="food-img">
         
@@ -212,42 +212,7 @@ function displayfooditems(fooditems) {
             </div>
             </div>
             </article>`;
-        })
-        displayfood = displayfood.join("");
-        sectioncenter.innerHTML = displayfood;
-    }        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    // const catagories = menu.reduce( function(values,item){
-           
-    //     if (!values.includes(item.category)){
-    //         values.push(item.category)
-    //     }
-    //     return values;
-    // },['all']);
-    
-    // const categoryBtns = catagories.map(function(category){
-    
-    //     return `<button class="all-btn" data-id="${category}">${category}</button>`;
-    
-    // })
-    // .join("");
-    // // container.innerHTML = categoryBtns;
+    })
+    displayfood = displayfood.join("");
+    sectioncenter.innerHTML = displayfood;
+}        
